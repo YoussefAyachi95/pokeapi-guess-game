@@ -18,9 +18,6 @@ async function fetchData() {
         // Generate a random picture of the pokemon
 
         function aleatorio() {
-            let numero = 0;
-            numero = Math.floor(Math.random() * 1154) + 1;
-            console.log(numero);
             img.setAttribute('src', data.sprites.front_default);
         }
 
@@ -55,7 +52,7 @@ async function fetchData() {
                     document.querySelector('input').value = ""
                     setTimeout(() => {
                         resetar();
-                    }, 2000)
+                    }, 6000)
                 }
             } else {
                 document.querySelector('span').innerHTML = "Write the name"
@@ -64,7 +61,7 @@ async function fetchData() {
 
     } catch (e) {
         console.log(e);
-        document.querySelector('span').innerHTML = "FAILED TO LOAD IMAGE, REFRESH ";
+        document.querySelector('span').innerHTML = "FAILED TO LOAD IMAGE, REFRESH";
     }
 
 
